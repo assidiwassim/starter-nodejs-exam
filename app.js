@@ -9,12 +9,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://mongodb:27017/my-db", { useNewUrlParser: true })
+  .connect("mongodb://localhost:27017/my-db", { useNewUrlParser: true })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
 app.get("/", (req, res) => {
-  res.send("Hello World - Le bon développeur community !");
+  res.send("Hello World !");
 });
 
 app.get("/items", (req, res) => {
